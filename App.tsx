@@ -66,15 +66,17 @@ const FAQItem: React.FC<{ question: string; answer: string }> = ({ question, ans
   const [isOpen, setIsOpen] = React.useState(false);
   return (
     <div className="border-b-2 border-black">
-      <button 
+      <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full py-6 flex justify-between items-center text-left hover:bg-black/5 transition-colors"
+        className="w-full py-5 px-4 md:px-6 md:py-6 flex justify-between items-center text-left hover:bg-black/5 transition-colors"
       >
-        <span className="font-bold text-lg md:text-xl uppercase tracking-tighter pr-4">{question}</span>
-        <ChevronDown className={`w-6 h-6 transition-transform flex-shrink-0 ${isOpen ? 'rotate-180' : ''}`} strokeWidth={3} />
+        <span className="font-bold text-base md:text-xl uppercase tracking-tighter pr-3 md:pr-4 leading-tight">{question}</span>
+        <span className="text-2xl md:text-3xl font-bold flex-shrink-0 w-8 h-8 flex items-center justify-center">
+          {isOpen ? '−' : '+'}
+        </span>
       </button>
       {isOpen && (
-        <div className="pb-6 pr-8 text-base md:text-lg text-black/70 leading-relaxed font-medium">
+        <div className="pb-5 px-4 pr-12 md:pb-6 md:px-6 md:pr-16 text-sm md:text-lg text-black/70 leading-relaxed font-medium">
           {answer}
         </div>
       )}
