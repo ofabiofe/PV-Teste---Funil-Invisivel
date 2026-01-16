@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funil Invisível - O Sistema de Vendas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'IBM Plex Mono', monospace;
+        background-color: #fdfdfd;
+        color: #1a1a1a;
+      }
+      .brutalist-border {
+        border: 2px solid #000;
+        box-shadow: 4px 4px 0px #000;
+      }
+      .brutalist-button {
+        border: 2px solid #000;
+        box-shadow: 4px 4px 0px #000;
+        transition: all 0.1s ease;
+      }
+      .brutalist-button:active {
+        box-shadow: 0px 0px 0px #000;
+        transform: translate(4px, 4px);
+      }
+      .highlighter-red {
+        background-color: #e53935;
+        color: white;
+        padding: 0px 4px;
+      }
+      .highlighter-green {
+        background-color: #4caf50;
+        color: white;
+        padding: 0px 4px;
+      }
+      .highlighter-yellow {
+        background-color: #fdd835;
+        color: black;
+        padding: 0px 4px;
+      }
+      .max-w-1160 {
+        max-width: 1160px;
+      }
+      /* Estilo Jornalístico */
+      .paper-bg {
+        background-image: radial-gradient(#d1d1d1 0.5px, transparent 0.5px);
+        background-size: 20px 20px;
+      }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "react/": "https://esm.sh/react@^19.2.3/",
+        "react": "https://esm.sh/react@^19.2.3",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+        "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
