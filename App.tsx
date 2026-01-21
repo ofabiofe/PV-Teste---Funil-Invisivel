@@ -375,45 +375,45 @@ const App: React.FC = () => {
         </div>
       </Section>
 
-      {/* Offer / Pricing - REDIMENSIONADO */}
+      {/* Offer / Pricing - COMPACTO */}
       <Section className="bg-black text-white !max-w-none px-6 md:px-0">
-        <div className="max-w-1160 mx-auto space-y-12 py-12 md:py-16">
-          <div className="space-y-4">
+        <div className="max-w-1160 mx-auto space-y-8 py-10 md:py-12">
+          <div className="space-y-3">
             <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none">Funil <br/> Invisível</h2>
             <p className="text-lg md:text-xl uppercase tracking-[0.3em] text-green-500 font-bold italic">SISTEMA + IA ARQUITETO</p>
           </div>
 
-          <div className="brutalist-border border-white bg-zinc-900 p-8 md:p-12 space-y-10 shadow-[8px_8px_0px_#22c55e]">
-            <div className="space-y-6 text-left border-b border-white/10 pb-8">
-              <div className="flex items-center gap-4 text-lg md:text-xl font-bold uppercase tracking-tight">
-                <CheckCircle2 className="text-green-500 w-6 h-6 flex-shrink-0" strokeWidth={3} />
+          <div className="brutalist-border border-white bg-zinc-900 p-6 md:p-8 space-y-6 shadow-[8px_8px_0px_#22c55e]">
+            <div className="space-y-4 text-left border-b border-white/10 pb-5">
+              <div className="flex items-center gap-3 text-base md:text-lg font-bold uppercase tracking-tight">
+                <CheckCircle2 className="text-green-500 w-5 h-5 flex-shrink-0" strokeWidth={3} />
                 <span>Trilha Invisível (6 Etapas)</span>
               </div>
-              <div className="flex items-center gap-4 text-lg md:text-xl font-bold uppercase tracking-tight">
-                <CheckCircle2 className="text-green-500 w-6 h-6 flex-shrink-0" strokeWidth={3} />
+              <div className="flex items-center gap-3 text-base md:text-lg font-bold uppercase tracking-tight">
+                <CheckCircle2 className="text-green-500 w-5 h-5 flex-shrink-0" strokeWidth={3} />
                 <span>Arquiteto Invisível (IA Treinada)</span>
               </div>
-              <div className="flex items-center gap-4 text-lg md:text-xl font-bold uppercase tracking-tight">
-                <CheckCircle2 className="text-green-500 w-6 h-6 flex-shrink-0" strokeWidth={3} />
+              <div className="flex items-center gap-3 text-base md:text-lg font-bold uppercase tracking-tight">
+                <CheckCircle2 className="text-green-500 w-5 h-5 flex-shrink-0" strokeWidth={3} />
                 <span>Acesso Vitalício</span>
               </div>
             </div>
 
-            <div className="space-y-4">
-              <div className="text-xl md:text-2xl line-through opacity-30 font-bold italic">DE R$ 497</div>
-              <div className="text-6xl md:text-8xl font-black text-green-500 leading-none tracking-tighter">R$ 147</div>
-              <div className="text-sm md:text-base uppercase tracking-[0.4em] font-bold opacity-50 pt-4">PAGAMENTO ÚNICO</div>
+            <div className="space-y-3">
+              <div className="text-lg md:text-xl line-through opacity-30 font-bold italic">DE R$ 497</div>
+              <div className="text-5xl md:text-7xl font-black text-green-500 leading-none tracking-tighter">R$ 147</div>
+              <div className="text-sm md:text-base uppercase tracking-[0.4em] font-bold opacity-50 pt-2">PAGAMENTO ÚNICO</div>
             </div>
 
             <a href={checkoutUrl} target="_blank" rel="noopener noreferrer" className="block w-full">
-              <BrutalistButton primary className="w-full text-xl md:text-2xl bg-green-500 text-black border-none py-8 uppercase tracking-tighter font-black shadow-[4px_4px_0px_#fff]">
+              <BrutalistButton primary className="w-full text-xl md:text-2xl bg-green-500 text-black border-none py-6 uppercase tracking-tighter font-black shadow-[4px_4px_0px_#fff]">
                 QUERO ACESSAR AGORA
               </BrutalistButton>
             </a>
-            
-            <div className="flex flex-wrap items-center justify-start gap-8 text-xs font-bold uppercase opacity-60 border-t border-white/10 pt-8">
-              <div className="flex items-center gap-3"><Lock size={18} strokeWidth={2}/> Compra Segura</div>
-              <div className="flex items-center gap-3"><RefreshCw size={18} strokeWidth={2}/> 7 Dias de Garantia</div>
+
+            <div className="flex flex-wrap items-center justify-start gap-6 text-xs font-bold uppercase opacity-60 border-t border-white/10 pt-5">
+              <div className="flex items-center gap-2"><Lock size={16} strokeWidth={2}/> Compra Segura</div>
+              <div className="flex items-center gap-2"><RefreshCw size={16} strokeWidth={2}/> 7 Dias de Garantia</div>
             </div>
           </div>
         </div>
