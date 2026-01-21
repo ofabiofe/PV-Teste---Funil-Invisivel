@@ -38,7 +38,7 @@ const Section: React.FC<{ children: React.ReactNode; className?: string; id?: st
 
 const ModuleCard: React.FC<{ title: string; description: string; index: number }> = ({ title, description, index }) => (
   <div className="brutalist-border bg-white p-8 flex flex-col gap-4 min-h-[200px]">
-    <div className="text-xs font-bold opacity-30 uppercase tracking-widest">MÓDULO 0{index + 1}</div>
+    <div className="text-xs font-bold opacity-30 uppercase tracking-widest">ETAPA 0{index + 1}</div>
     <h4 className="text-xl font-bold leading-tight uppercase underline decoration-2 underline-offset-4">
       {title}
     </h4>
@@ -96,28 +96,46 @@ const TestimonialCard: React.FC<{ text: string; author: string }> = ({ text, aut
 );
 
 const App: React.FC = () => {
+  const checkoutUrl = "https://pay.hub.la/Ui8fsItYY02ZeNtjc0Dl";
+
   return (
     <div className="min-h-screen selection:bg-black selection:text-white overflow-x-hidden paper-bg">
       
-      {/* Hero Section */}
-      <Section className="text-left pt-24 md:pt-32 pb-16 border-b border-black/10">
+      {/* Hero Section - CENTRALIZADO COM VÍDEO */}
+      <Section className="text-center pt-24 md:pt-32 pb-16 border-b border-black/10 flex flex-col items-center">
         <div className="mb-8 inline-block px-4 py-2 border-2 border-black font-bold uppercase tracking-widest text-xs bg-black text-white shadow-[4px_4px_0px_#ff0000]">
           SISTEMA COMPLETO DE VENDAS
         </div>
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-[1.1] mb-10 tracking-tighter uppercase text-black">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-[1.1] mb-10 tracking-tighter uppercase text-black mx-auto">
           Transforme sua <br/>
           <span className="highlighter-red">base em dinheiro</span> agora. <br/>
           E atraia compradores <br/>
           novos todos os dias.
         </h1>
-        <div className="space-y-8 max-w-4xl">
-          <h2 className="text-xl md:text-2xl font-bold uppercase tracking-tight border-l-8 border-black pl-8 leading-tight">
+        <div className="space-y-8 max-w-4xl mx-auto mb-16">
+          <h2 className="text-xl md:text-2xl font-bold uppercase tracking-tight leading-tight px-4 border-y-2 border-black py-6 md:py-8">
             O sistema que te faz vender com consistência — sem esperar crescer, sem depender de alcance, sem parecer vendedor.
           </h2>
           <p className="text-lg md:text-xl text-black/60 font-bold leading-relaxed">
             Monetize os seguidores que você já tem hoje + crie um sistema que traz clientes qualificados de forma constante. <br/>
             <span className="text-black italic underline decoration-green-500 decoration-4 underline-offset-8">Vendas agora. Vendas sempre.</span>
           </p>
+        </div>
+
+        {/* VSL - Panda Video */}
+        <div className="w-full max-w-[400px] mx-auto brutalist-border overflow-hidden bg-black shadow-[12px_12px_0px_#ff0000]">
+          <div style={{ position: 'relative', paddingTop: '177.77777777777777%' }}>
+            <iframe 
+              id="panda-8bea72f2-caac-4f8c-9631-1e5375d9ea7a" 
+              src="https://player-vz-3ce101f1-cb3.tv.pandavideo.com.br/embed/?v=8bea72f2-caac-4f8c-9631-1e5375d9ea7a" 
+              style={{ border: 'none', position: 'absolute', top: 0, left: 0 }} 
+              allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" 
+              allowFullScreen={true} 
+              width="100%" 
+              height="100%" 
+              fetchPriority="high"
+            ></iframe>
+          </div>
         </div>
       </Section>
 
@@ -180,18 +198,30 @@ const App: React.FC = () => {
         </div>
       </Section>
 
-      {/* Fabio Fe Bio */}
+      {/* Fabio Fe Bio - ATUALIZADO COM IMAGEM */}
       <Section className="relative border-t border-black/10">
-        <div className="max-w-4xl space-y-12">
-          <div className="inline-block bg-black text-white px-6 py-3 font-bold text-xl uppercase tracking-tighter">
-            Quem é o Fábio Fe?
+        <div className="grid md:grid-cols-12 gap-12 items-center">
+          <div className="md:col-span-7 space-y-12">
+            <div className="inline-block bg-black text-white px-6 py-3 font-bold text-xl uppercase tracking-tighter">
+              Quem é o Fábio Fe?
+            </div>
+            <div className="space-y-8 text-lg md:text-xl font-medium leading-relaxed">
+              <p>Sou estrategista da <span className="font-bold underline decoration-green-500 decoration-4 underline-offset-4">maior comunidade focada em stories</span> do Brasil.</p>
+              <p>Mais de <span className="font-bold">38 mil assinantes ativos</span> e mais de <span className="font-bold underline">100 mil vendas realizadas</span> usando Instagram como canal principal.</p>
+              <div className="brutalist-border bg-white p-8 md:p-10 mt-8 space-y-4">
+                <p className="font-bold italic">"Isso não aconteceu porque eu 'sei criar conteúdo'. Aconteceu porque eu entendi algo simples — e ignorado pela maioria:"</p>
+                <p className="text-2xl md:text-4xl font-black uppercase leading-tight tracking-tighter highlighter-red inline-block">Stories não vendem. Sistema vende.</p>
+              </div>
+            </div>
           </div>
-          <div className="space-y-8 text-lg md:text-xl font-medium leading-relaxed">
-            <p>Sou estrategista da <span className="font-bold underline decoration-green-500 decoration-4 underline-offset-4">maior comunidade focada em stories</span> do Brasil.</p>
-            <p>Mais de <span className="font-bold">38 mil assinantes ativos</span> e mais de <span className="font-bold underline">100 mil vendas realizadas</span> usando Instagram como canal principal.</p>
-            <div className="brutalist-border bg-white p-10 mt-8 space-y-4">
-              <p className="font-bold italic">"Isso não aconteceu porque eu 'sei criar conteúdo'. Aconteceu porque eu entendi algo simples — e ignorado pela maioria:"</p>
-              <p className="text-3xl md:text-4xl font-black uppercase leading-tight tracking-tighter highlighter-red inline-block">Stories não vendem. Sistema vende.</p>
+          <div className="md:col-span-5 flex justify-center md:justify-end">
+            <div className="relative">
+               <div className="absolute inset-0 bg-green-500 translate-x-4 translate-y-4 -z-10"></div>
+               <img 
+                src="http://fabiofe.com.br/wp-content/uploads/2026/01/fabio-apresentacao.png" 
+                alt="Fábio Fe" 
+                className="brutalist-border max-w-full h-auto grayscale hover:grayscale-0 transition-all duration-500"
+              />
             </div>
           </div>
         </div>
@@ -261,14 +291,14 @@ const App: React.FC = () => {
         </div>
       </Section>
 
-      {/* Modules */}
+      {/* Modules - ATUALIZADO PARA ETAPAS */}
       <Section className="border-t border-black/10">
         <div className="mb-16 text-left">
           <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-6 leading-none">O que você recebe</h2>
-          <p className="text-xl text-black/40 italic font-bold uppercase tracking-tighter">A Trilha Invisível: 6 módulos diretos.</p>
+          <p className="text-xl text-black/40 italic font-bold uppercase tracking-tighter">A Trilha Invisível: 6 etapas diretas.</p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <ModuleCard index={0} title="O Jogo Invisível" description="Por que você não vende (mesmo tendo atenção) e como inverter isso." />
+          <ModuleCard index={0} title="O Jogo Invisível" description="Por que você não vende (mesmo tendo attention) e como inverter isso." />
           <ModuleCard index={1} title="Atenção Certa" description="Como atrair compradores (não curiosos) através do seu posicionamento." />
           <ModuleCard index={2} title="Zona de Conversão" description="Os momentos exatos onde a decisão acontece (e como criar)." />
           <ModuleCard index={3} title="Engenharia dos Stories" description="Sequências exatas que levam da atenção até a conversa no DM." />
@@ -357,7 +387,7 @@ const App: React.FC = () => {
             <div className="space-y-6 text-left border-b border-white/10 pb-8">
               <div className="flex items-center gap-4 text-lg md:text-xl font-bold uppercase tracking-tight">
                 <CheckCircle2 className="text-green-500 w-6 h-6 flex-shrink-0" strokeWidth={3} />
-                <span>Trilha Invisível (6 Módulos)</span>
+                <span>Trilha Invisível (6 Etapas)</span>
               </div>
               <div className="flex items-center gap-4 text-lg md:text-xl font-bold uppercase tracking-tight">
                 <CheckCircle2 className="text-green-500 w-6 h-6 flex-shrink-0" strokeWidth={3} />
@@ -375,9 +405,11 @@ const App: React.FC = () => {
               <div className="text-sm md:text-base uppercase tracking-[0.4em] font-bold opacity-50 pt-4">PAGAMENTO ÚNICO</div>
             </div>
 
-            <BrutalistButton primary className="w-full text-xl md:text-2xl bg-green-500 text-black border-none py-8 uppercase tracking-tighter font-black shadow-[4px_4px_0px_#fff]">
-              QUERO ACESSAR AGORA
-            </BrutalistButton>
+            <a href={checkoutUrl} target="_blank" rel="noopener noreferrer" className="block w-full">
+              <BrutalistButton primary className="w-full text-xl md:text-2xl bg-green-500 text-black border-none py-8 uppercase tracking-tighter font-black shadow-[4px_4px_0px_#fff]">
+                QUERO ACESSAR AGORA
+              </BrutalistButton>
+            </a>
             
             <div className="flex flex-wrap items-center justify-start gap-8 text-xs font-bold uppercase opacity-60 border-t border-white/10 pt-8">
               <div className="flex items-center gap-3"><Lock size={18} strokeWidth={2}/> Compra Segura</div>
@@ -426,9 +458,11 @@ const App: React.FC = () => {
           </div>
 
           <div className="pt-20">
-            <BrutalistButton primary className="text-3xl md:text-6xl bg-green-500 text-black border-none w-full py-16 font-black tracking-tighter uppercase leading-none">
-              QUERO O FUNIL AGORA
-            </BrutalistButton>
+            <a href={checkoutUrl} target="_blank" rel="noopener noreferrer" className="block w-full">
+              <BrutalistButton primary className="text-3xl md:text-6xl bg-green-500 text-black border-none w-full py-16 font-black tracking-tighter uppercase leading-none">
+                QUERO O FUNIL AGORA
+              </BrutalistButton>
+            </a>
             <p className="mt-16 text-xl md:text-3xl italic opacity-50 font-bold leading-none max-w-4xl tracking-tighter uppercase">
               Você não precisa crescer para vender. <br/> <span className="text-white">Você precisa de sistema.</span>
             </p>
@@ -437,8 +471,12 @@ const App: React.FC = () => {
       </Section>
 
       {/* Footer */}
-      <footer className="py-16 px-6 border-t border-black/10 text-left text-[10px] font-bold uppercase tracking-[0.4em] opacity-40 font-mono max-w-1160 mx-auto">
-        © {new Date().getFullYear()} FUNIL INVISÍVEL - MÉTODO FÁBIO FE.
+      <footer className="py-16 px-6 border-t border-black/10 text-left text-[10px] font-bold uppercase tracking-[0.2em] opacity-40 font-mono max-w-1160 mx-auto space-y-12">
+        <div className="tracking-[0.4em]">© {new Date().getFullYear()} FUNIL INVISÍVEL - MÉTODO FÁBIO FE.</div>
+        <div className="space-y-6 max-w-5xl leading-relaxed">
+          <p>O Funil Invisível é um produto independente. Este site não possui qualquer vínculo, endosso ou parceria com TikTok, Google ou META. Essas plataformas são utilizadas apenas como meios de veiculação de conteúdo e tráfego. Todo o material, estratégia e responsabilidade sobre o produto são exclusivamente da Comunidade da Camys.</p>
+          <p>Os resultados apresentados foram alcançados por pessoas reais que colocaram o método em prática com disciplina e execução correta. Ainda assim, não existe promessa de ganhos ou resultados garantidos, uma vez que cada pessoa aplica o método de forma diferente, com níveis variados de esforço, constância e comprometimento.</p>
+        </div>
       </footer>
 
     </div>
