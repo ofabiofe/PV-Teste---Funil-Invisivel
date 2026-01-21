@@ -66,9 +66,9 @@ const FAQItem: React.FC<{ question: string; answer: string }> = ({ question, ans
   const [isOpen, setIsOpen] = React.useState(false);
   return (
     <div className="border-b-2 border-black">
-      <button 
+      <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full py-6 flex justify-between items-center text-left hover:bg-black/5 transition-colors"
+        className="w-full py-6 flex justify-between items-center text-left hover:bg-black hover:text-white transition-colors"
       >
         <span className="font-bold text-lg md:text-xl uppercase tracking-tighter pr-4">{question}</span>
         <ChevronDown className={`w-6 h-6 transition-transform flex-shrink-0 ${isOpen ? 'rotate-180' : ''}`} strokeWidth={3} />
@@ -422,7 +422,7 @@ const App: React.FC = () => {
       {/* FAQ */}
       <Section>
         <div className="mb-16 text-left">
-          <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none">Dúvidas?</h2>
+          <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none">ainda está com dúvidas?</h2>
         </div>
         <div className="space-y-0 max-w-4xl">
           <FAQItem question="Vou crescer com esse sistema?" answer="Sim. Mas você vai crescer COM COMPRADORES, não com curiosos. O crescimento é consequência da sua estratégia." />
