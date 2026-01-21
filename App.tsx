@@ -230,7 +230,7 @@ const App: React.FC = () => {
       {/* The System: Funil Invisível */}
       <Section className="relative bg-zinc-50 border-y border-black/10 !max-w-none">
         <div className="max-w-1160 mx-auto py-16">
-          <div className="space-y-16">
+          <div className="space-y-16 flex flex-col items-center text-center">
             <div className="inline-block bg-black text-white px-8 py-4 font-bold text-2xl uppercase tracking-tighter shadow-[6px_6px_0px_#00ff00]">
               O Funil Invisível
             </div>
